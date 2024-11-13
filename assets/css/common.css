@@ -1383,7 +1383,7 @@ header button {
     margin-top: calc(66px * 0.7);
   }
   .index .swiper-slide .btn-kakao {
-    /* margin-top: calc(60px * 0.7); */
+    margin-top: calc(-24px * 0.7);
   }
   .index .swiper-slide .btn-kakao button {
     width: calc(500px * 0.7);
