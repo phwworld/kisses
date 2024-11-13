@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HERSHEY`S KISSES</title>
+  <link rel="stylesheet" href="./assets/css/ui.css">
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <h1><img src="./assets/image/logo.png" alt=""></h1>
+    <button type="button" onclick="modalOpen('modal-info')"></button>
+  </header>
+  <!-- //header -->
+
+  <!-- main -->
+  <main>
+    <!-- result -->
+    <div class="result">
+      <div class="inner">
+        <p class="tit">
+          <strong>스르륵~~</strong><br>
+          <strong>키세스</strong>가 전하는<br>
+          <strong>행운</strong> 메시지
+        </p>
+
+        <!-- message -->
+        <div class="message">
+          <img src="./assets/image/result_img1.png" alt="">
+          <!-- 메시지 내용 -->
+          <div class="message-box">
+            <p>
+              축하할 만한 기쁜 일이 생길 거에요.<br>
+              좋은 시간을 나누세요☺
+            </p>
+          </div>
+          <!-- //메시지 내용 -->
+        </div>
+        <!-- //message -->
+
+        <!-- btn-area -->
+        <div class="btn-area">
+          <a href="event.html" class="btn-large btn-blue"><span>다시하기</span></a>
+          <a href="javascript:;" class="btn-large btn-white" onclick="modalOpen('modal-share');"><span>내 결과
+              공유</span></a>
+        </div>
+      </div>
+    </div>
+    <!-- //result -->
+
+    <!-- banner -->
+    <div class="banner">
+      <a href="javascript:;" onclick="modalOpen('modal-pakage');">
+        <img src="./assets/image/result_banner.png" alt="">
+      </a>
+    </div>
+  </main>
+  <!-- //main -->
+
+  <!-- 공유하기 -->
+  <div class="modal modal-share hide">
+    <div class="modal-cont">
+      <div>
+        <div class="share">
+          <button type="button">카카오톡 공유</button>
+          <button type="button">URL 복사</button>
+        </div>
+
+        <button type="button" class="close" onclick="modalClose('modal-share')">닫기</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 이벤트 소개 레이어 -->
+  <div class="modal-info hide">
+    <img src="./assets/image/event_info1.jpg" alt="">
+    <img src="./assets/image/event_info2.jpg" alt="">
+    <img src="./assets/image/event_info3.jpg" alt="">
+    <div class="video">
+      <video playsinline poster="./assets/image/video_poster.png">
+        <source src="https://connectkisses.com/assets/video/film.mp4">
+      </video>
+      <button type="button" class="play" onclick="videoPlay(this);"></button>
+      <button type="button" class="pause" onclick="videoPause(this);"></button>
+      <div class="mask" onclick="videoContinue(this);"></div>
+    </div>
+    <img src="./assets/image/event_info4.jpg" alt="">
+    <img src="./assets/image/event_info5.jpg" alt="">
+    <img src="./assets/image/event_info6.jpg" alt="">
+    <img src="./assets/image/event_info7.jpg" alt="">
+    <img src="./assets/image/event_info8.jpg" alt="">
+    <img src="./assets/image/event_info9.jpg" alt="">
+    <div class="btn-area">
+      <button type="button" class="btn-large btn-brown w100" onclick="modalClose('modal-info')">확인</button>
+    </div>
+
+    <button type="button" class="close" onclick="modalClose(this)"></button>
+  </div>
+
+  <!-- 패키지 소개 -->
+  <div class="modal-pakage hide">
+    <div class="cont">
+      <div class="logo">
+        <img src="./assets/image/logo2.png" alt="">
+      </div>
+
+      <p class="tit">
+        <span>새로운 키세스 패키지로</span>
+        마음을 전하는 방법!
+      </p>
+
+      <div class="tab">
+        <a href="javscript:;" class="act">크리미 밀크</a>
+        <a href="javscript:;">쿠키앤크림</a>
+        <a href="javscript:;">크리미 밀크아몬드</a>
+      </div>
+
+      <div class="tab-cont">
+        <div class="cont">
+          <div class="img img1">
+            <img src="./assets/image/slide3_img1.png" alt="">
+            <span>
+              <img src="./assets/image/slide3_img4.png" alt="">
+            </span>
+          </div>
+
+          <p class="txt">
+            패키지 속 메시지란에 진심을 적어<br>
+            달콤함을 나눠보세요
+          </p>
+
+          <div class="btn">
+            <a target="_blank"
+              href="https://brand.naver.com/lotteconf/search?q=%ED%97%88%EC%89%AC%20%ED%82%A4%EC%84%B8%EC%8A%A4%2052g">크리미
+              밀크초콜릿 구매하기</a>
+          </div>
+        </div>
+
+        <div class="cont">
+          <div class="img img1">
+            <img src="./assets/image/slide3_img2.png" alt="">
+            <span>
+              <img src="./assets/image/slide3_img5.png" alt="">
+            </span>
+          </div>
+
+          <p class="txt">
+            패키지 속 메시지란에 진심을 적어<br>
+            달콤함을 나눠보세요
+          </p>
+
+          <div class="btn">
+            <a target="_blank"
+              href="https://brand.naver.com/lotteconf/search?q=%ED%97%88%EC%89%AC%20%ED%82%A4%EC%84%B8%EC%8A%A4%2052g">쿠키앤크림
+              구매하기</a>
+          </div>
+        </div>
+
+        <div class="cont">
+          <div class="img img1">
+            <img src="./assets/image/slide3_img3.png" alt="">
+            <span>
+              <img src="./assets/image/slide3_img6.png" alt="">
+            </span>
+          </div>
+
+          <p class="txt">
+            패키지 속 메시지란에 진심을 적어<br>
+            달콤함을 나눠보세요
+          </p>
+
+          <div class="btn">
+            <a target="_blank"
+              href="https://brand.naver.com/lotteconf/search?q=%ED%97%88%EC%89%AC%20%ED%82%A4%EC%84%B8%EC%8A%A4%2052g">크리미
+              밀크아몬드 구매하기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="close" onclick="modalClose(this)"></button>
+  </div>
+
+  <script src="./assets/js/ui.js"></script>
+</body>
+
+</html>
