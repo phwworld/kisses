@@ -1926,7 +1926,60 @@ header button {
 }
 
 @media (min-width: 480px) and (max-height: 750px) {
-  .modal-join{
+  /* modal-join */
+  .modal-join {
+    width: calc(622px * 0.7);
+    padding: calc(60px * 0.6) 0 0 0;
+    border-radius: calc(40px * 0.6);
+    transform: translate(-50%, -50%);
     background: red;
+  }
+  .modal-join.hidden {
+    top: 100%;
+    transform: translate(-50%, 100%);
+  }
+  .modal-join .tit {
+    font-size: calc(68px * 0.6);
+    letter-spacing: -3.4px;
+  }
+  .modal-join .tit span {
+    padding-bottom: calc(10px * 0.6);
+    font-size: calc(50px * 0.6);
+    letter-spacing: -2.5px;
+  }
+  .modal-join .txt1 {
+    margin-top: calc(20px * 0.6);
+    font-size: calc(30px * 0.6);
+  }
+  .modal-join .txt2 {
+    margin-top: calc(20px * 0.6);
+  }
+  .modal-join .txt2 span {
+    width: calc(368px * 0.6);
+    height: calc(56px * 0.6);
+    border-radius: calc(1000px * 0.6);
+    font-size: calc(26px * 0.6);
+    line-height: calc(56px * 0.6);
+  }
+  .modal-join .img {
+    margin-top: calc(60px * 0.6);
+    padding: 0 calc(8px * 0.6);
+  }
+  .modal-join .txt3 {
+    margin: calc(40px * 0.6) 0 calc(60px * 0.6);
+    font-size: calc(30px * 0.6);
+  }
+  .modal-join .btn-join {
+    height: calc(120px * 0.6);
+    border-radius: 0px 0px calc(40px * 0.6) calc(40px * 0.6);
+    font-size: calc(30px * 0.6);
+    line-height: calc(120px * 0.6);
+  }
+  .modal-join .close {
+    position: absolute;
+    top: calc(-30px * 0.6);
+    right: calc(-30px * 0.6);
+    width: calc(100px * 0.6);
+    height: calc(100px * 0.6);
   }
 }
