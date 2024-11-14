@@ -1932,7 +1932,6 @@ header button {
     padding: calc(60px * 0.6) 0 0 0;
     border-radius: calc(40px * 0.6);
     transform: translate(-50%, -50%);
-    background: red;
   }
   .modal-join.hidden {
     top: 100%;
