@@ -1924,3 +1924,9 @@ header button {
     height: calc(100px * 0.7);
   }
 }
+
+@media screen and (max-height: 740px) {
+  .modal-join{
+    background: red;
+  }
+}
