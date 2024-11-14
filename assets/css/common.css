@@ -531,13 +531,13 @@ header button {
 
 @-webkit-keyframes float2 {
   0% {
-    transform: translateY(-6px);
+    transform: translateY(-10px);
   }
   50% {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(6px);
+    transform: translateY(10px);
   }
 }
 
