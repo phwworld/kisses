@@ -1479,14 +1479,14 @@ header button {
     left: calc(140px * 0.7);
     width: calc(64px * 0.7);
     height: calc(70px * 0.7);
-    animation: float1 1s linear infinite alternate;
+    /* animation: float1 1s linear infinite alternate; */
   }
   .index .swiper-slide:nth-of-type(1) .motion2 {
     top: calc(904px * 0.7);
     left: calc(532px * 0.7);
     width: calc(210px * 0.7);
     height: calc(200px * 0.7);
-    animation: bounce 1s linear infinite alternate;
+    /* animation: bounce 1s linear infinite alternate; */
   }
   .index .swiper-slide:nth-of-type(2) .motion1 {
     top: calc(390px * 0.7);
