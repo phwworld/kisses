@@ -1391,6 +1391,7 @@ header button {
     border-radius: calc(20px * 0.7);
     font-size: calc(30px * 0.7);
     letter-spacing: -0.75px;
+    box-shadow: 0 calc(4px * 0.7) 0 0 rgba(0, 0, 0, 0.1);
   }
   .index .swiper-slide .tab {
     margin: calc(40px * 0.7) auto 0;
