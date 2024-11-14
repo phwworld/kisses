@@ -700,8 +700,11 @@ header button {
   justify-content: center;
   align-items: center;
   min-height: calc(100dvh - 10.6666vw);
-  background: url(../image/bg_event.png);
-  background-size: 100% 100%;
+  background-image: url(../image/bg_event.png);
+  background-position: left center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-color: #3e000a;
 }
 .event .inner {
   position: relative;
