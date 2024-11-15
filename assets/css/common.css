@@ -782,7 +782,6 @@ header button {
   border-width: 3px 3px 0 0;
   border-style: solid;
   border-color: #fff;
-  transform: rotate(-15deg);
   animation: arrow-wave 1s infinite alternate;
 }
 .event .slide .img2 .arrow:nth-child(1) {animation-delay: 0.1s;}
@@ -795,9 +794,9 @@ header button {
   100% {opacity: 1;}
 }
 @keyframes arrow_down{
-  0%{transform: translateX(0);}
-  50%{transform: translateX(10px);}
-  100%{transform: translateX(0);}
+  0%{transform: rotate(-15deg) translateX(0);}
+  50%{transform: rotate(-15deg) translateX(10px);}
+  100%{transform: rotate(-15deg) translateX(0);}
 }
 
 .event .motion {
