@@ -787,6 +787,7 @@ header button {
 .event .slide .img2 .arrow:nth-child(1) {animation-delay: 0.1s;}
 .event .slide .img2 .arrow:nth-child(2) {margin-left:6px; animation-delay: 0.2s;}
 .event .slide .img2 .arrow:nth-child(3) {margin-left:6px; animation-delay: 0.3s;}
+.event .slide .img2 .arrow:nth-child(4) {margin-left:6px; animation-delay: 0.4s;}
 
 @keyframes arrow-wave {
   0% {opacity: 0;}
