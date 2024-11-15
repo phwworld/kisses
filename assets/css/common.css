@@ -769,6 +769,36 @@ header button {
 .event .slide .img1 img {
   width: 21.3333vw;
 }
+.event .slide .img2 {
+  position: absolute;
+  top: 5.3333vw;
+  left: 16vw;
+  animation:arrow_down 1.5s infinite;
+}
+.event .slide .img2 .arrow{
+  width: 8px;
+  height: 8px;
+  border-width: 3px 3px 0 0;
+  border-style: solid;
+  border-color: #fff;
+  transform: rotate(45deg);
+  animation: arrow-wave 1s infinite alternate;
+}
+.event .slide .img2 .arrow:nth-child(1) {animation-delay: 0.1s;}
+.event .slide .img2 .arrow:nth-child(2) {margin-top:6px; animation-delay: 0.2s;}
+.event .slide .img2 .arrow:nth-child(3) {margin-top:6px; animation-delay: 0.3s;}
+
+@keyframes arrow-wave {
+  0% {opacity: 0;}
+  50% {opacity: .5;}
+  100% {opacity: 1;}
+}
+@keyframes arrow_down{
+  0%{transform: translateX(0);}
+  50%{transform: translateX(10px);}
+  100%{transform: translateX(0);}
+}
+
 .event .motion {
   position: absolute;
   top: 34.6667vw;
