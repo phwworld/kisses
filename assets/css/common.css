@@ -519,13 +519,13 @@ header button {
 
 @-webkit-keyframes float {
   0% {
-    transform: translateY(-3px);
+    transform: translateY(-6px);
   }
   50% {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(3px);
+    transform: translateY(6px);
   }
 }
 
@@ -546,7 +546,7 @@ header button {
     transform: scale(1);
   }
   100% {
-    transform: scale(1.1);
+    transform: scale(1.5);
   }
 }
 
