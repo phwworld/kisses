@@ -1697,7 +1697,7 @@ header button {
   }
 
   .event .slide .img2 {
-    top: calc(74px * 0..7);
+    top: calc(74px * 0.7);
     left: 0;
   }
   .event .slide .img2 .arrow{
