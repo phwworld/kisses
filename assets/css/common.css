@@ -772,7 +772,7 @@ header button {
 .event .slide .img2 {
   position: absolute;
   top: 9.8667vw;
-  left: -1.3333vw;
+  left: 0;
   display: flex;
   animation:arrow_down 1.5s infinite;
 }
@@ -1690,11 +1690,21 @@ header button {
   }
   .event .slide .img1 {
     top: calc(40px * 0.7);
-    left: calc(120px * 0.7);
+    left: calc(130px * 0.7);
   }
   .event .slide .img1 img {
     width: calc(160px * 0.7);
   }
+
+  .event .slide .img2 {
+    top: calc(74px * 0..7);
+    left: 0;
+  }
+  .event .slide .img2 .arrow{
+    width: calc(16px * 0.7);
+    height: calc(16px * 0.7);
+  }
+
   .event .motion {
     top: calc(250px * 0.7);
     left: calc(100px * 0.7);
