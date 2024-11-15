@@ -764,15 +764,15 @@ header button {
 .event .slide .img1 {
   position: absolute;
   top: 5.3333vw;
-  left: 16vw;
+  left: 17.3333vw;
 }
 .event .slide .img1 img {
   width: 21.3333vw;
 }
 .event .slide .img2 {
   position: absolute;
-  top: 5.3333vw;
-  left: 16vw;
+  top: 9.8667vw;
+  left: -1.3333vw;
   display: flex;
   animation:arrow_down 1.5s infinite;
 }
