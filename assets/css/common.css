@@ -773,6 +773,8 @@ header button {
   position: absolute;
   top: 5.3333vw;
   left: 16vw;
+  display: flex;
+  transform: rotate(-15deg);
   animation:arrow_down 1.5s infinite;
 }
 .event .slide .img2 .arrow{
@@ -785,8 +787,8 @@ header button {
   animation: arrow-wave 1s infinite alternate;
 }
 .event .slide .img2 .arrow:nth-child(1) {animation-delay: 0.1s;}
-.event .slide .img2 .arrow:nth-child(2) {margin-top:6px; animation-delay: 0.2s;}
-.event .slide .img2 .arrow:nth-child(3) {margin-top:6px; animation-delay: 0.3s;}
+.event .slide .img2 .arrow:nth-child(2) {margin-left:6px; animation-delay: 0.2s;}
+.event .slide .img2 .arrow:nth-child(3) {margin-left:6px; animation-delay: 0.3s;}
 
 @keyframes arrow-wave {
   0% {opacity: 0;}
