@@ -774,7 +774,6 @@ header button {
   top: 5.3333vw;
   left: 16vw;
   display: flex;
-  transform: rotate(-15deg);
   animation:arrow_down 1.5s infinite;
 }
 .event .slide .img2 .arrow{
@@ -783,7 +782,7 @@ header button {
   border-width: 3px 3px 0 0;
   border-style: solid;
   border-color: #fff;
-  transform: rotate(45deg);
+  transform: rotate(-15deg);
   animation: arrow-wave 1s infinite alternate;
 }
 .event .slide .img2 .arrow:nth-child(1) {animation-delay: 0.1s;}
