@@ -851,6 +851,19 @@ header button {
 .event .loading video::poster {
   display: none;
 }
+.event .loading video::-webkit-media-controls {
+  display: none;
+}
+.event .loading video::-webkit-media-controls-start-playback-button {
+  display: none;
+}
+.event .loading video::-webkit-media-controls-poster {
+  display: none;
+  background: transparent;
+}
+.event .loading video {
+  background: transparent !important;
+}
 
 /* result */
 .result {
