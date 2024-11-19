@@ -1876,9 +1876,9 @@ header button {
 
   /* modal-info */
   .modal-info {
-    left: 50%;
+    left: calc(50% - (750px * 0.7 / 2));
     width: calc(750px * 0.7);
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
   }
   .modal-info .video {
     height: calc(426px * 0.7);
@@ -1889,7 +1889,7 @@ header button {
   }
   .modal-info .close {
     top: calc(20px * 0.7);
-    right: calc(20px * 0.7);
+    right: calc(50% - (750px * 0.7 / 2) + (20px * 0.7));
     width: calc(100px * 0.7);
     height: calc(100px * 0.7);
   }
