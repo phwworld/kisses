@@ -18,6 +18,10 @@ if (guidePopup) {
       guidePopup.classList.add('hide');
     }, 3000);
   });
+
+  guidePopup.addEventListener('click', () => {
+    guidePopup.classList.add('hide');
+  })
 }
 
 // modal open
