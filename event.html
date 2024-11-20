@@ -50,10 +50,12 @@
 
       <!-- loading -->
       <div class="loading">
-        <video playsinline muted preload="auto"
+        <!-- <video playsinline muted preload="auto"
           poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
           <source src="https://connectkisses.com/assets/video/motion.mp4">
-        </video>
+        </video> -->
+
+        <canvas id="animationCanvas"></canvas>
       </div>
       <!-- //loading -->
     </div>
@@ -92,7 +94,7 @@
     const eventSlider = () => {
       const newUrl = `result.html`; /* 주소변경 필요 */
       const eventLoading = document.querySelector('.event .loading');
-      const loadingVideo = eventLoading.querySelector('video');
+      // const loadingVideo = eventLoading.querySelector('video');
       const emotionRange = document.querySelector('.emotion_range');
       const rangeValue = () => {
         const emotionState = document.querySelector('.emotion_state');
@@ -105,11 +107,11 @@
 
         if (value === 100) {
           eventLoading.style.display = 'block';
-          loadingVideo.play();
+          // loadingVideo.play();
         }
-        loadingVideo.addEventListener('ended', (event) => {
-          window.location.replace(newUrl);
-        });
+        // loadingVideo.addEventListener('ended', (event) => {
+        //   window.location.replace(newUrl);
+        // });
       }
 
       emotionRange.addEventListener("input", rangeValue)
@@ -125,6 +127,144 @@
 
       }
     });
+
+    // 캔버스 설정
+    const canvas = document.getElementById('animationCanvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const imagePaths = [
+      './assets/image/motions/motions_0001.png'
+      , './assets/image/motions/motions_0002.png'
+      , './assets/image/motions/motions_0003.png'
+      , './assets/image/motions/motions_0004.png'
+      , './assets/image/motions/motions_0005.png'
+      , './assets/image/motions/motions_0006.png'
+      , './assets/image/motions/motions_0007.png'
+      , './assets/image/motions/motions_0008.png'
+      , './assets/image/motions/motions_0009.png'
+      , './assets/image/motions/motions_0010.png'
+      , './assets/image/motions/motions_0011.png'
+      , './assets/image/motions/motions_0012.png'
+      , './assets/image/motions/motions_0013.png'
+      , './assets/image/motions/motions_0014.png'
+      , './assets/image/motions/motions_0015.png'
+      , './assets/image/motions/motions_0016.png'
+      , './assets/image/motions/motions_0017.png'
+      , './assets/image/motions/motions_0018.png'
+      , './assets/image/motions/motions_0019.png'
+      , './assets/image/motions/motions_0020.png'
+      , './assets/image/motions/motions_0021.png'
+      , './assets/image/motions/motions_0022.png'
+      , './assets/image/motions/motions_0023.png'
+      , './assets/image/motions/motions_0024.png'
+      , './assets/image/motions/motions_0025.png'
+      , './assets/image/motions/motions_0026.png'
+      , './assets/image/motions/motions_0027.png'
+      , './assets/image/motions/motions_0028.png'
+      , './assets/image/motions/motions_0029.png'
+      , './assets/image/motions/motions_0030.png'
+      , './assets/image/motions/motions_0031.png'
+      , './assets/image/motions/motions_0032.png'
+      , './assets/image/motions/motions_0033.png'
+      , './assets/image/motions/motions_0034.png'
+      , './assets/image/motions/motions_0035.png'
+      , './assets/image/motions/motions_0036.png'
+      , './assets/image/motions/motions_0037.png'
+      , './assets/image/motions/motions_0038.png'
+      , './assets/image/motions/motions_0039.png'
+      , './assets/image/motions/motions_0040.png'
+      , './assets/image/motions/motions_0041.png'
+      , './assets/image/motions/motions_0042.png'
+      , './assets/image/motions/motions_0043.png'
+      , './assets/image/motions/motions_0044.png'
+      , './assets/image/motions/motions_0045.png'
+      , './assets/image/motions/motions_0046.png'
+      , './assets/image/motions/motions_0047.png'
+      , './assets/image/motions/motions_0048.png'
+      , './assets/image/motions/motions_0049.png'
+      , './assets/image/motions/motions_0050.png'
+      , './assets/image/motions/motions_0051.png'
+      , './assets/image/motions/motions_0052.png'
+      , './assets/image/motions/motions_0053.png'
+      , './assets/image/motions/motions_0054.png'
+      , './assets/image/motions/motions_0055.png'
+      , './assets/image/motions/motions_0056.png'
+      , './assets/image/motions/motions_0057.png'
+      , './assets/image/motions/motions_0058.png'
+      , './assets/image/motions/motions_0059.png'
+      , './assets/image/motions/motions_0060.png'
+      , './assets/image/motions/motions_0061.png'
+      , './assets/image/motions/motions_0062.png'
+      , './assets/image/motions/motions_0063.png'
+      , './assets/image/motions/motions_0064.png'
+      , './assets/image/motions/motions_0065.png'
+      , './assets/image/motions/motions_0066.png'
+      , './assets/image/motions/motions_0067.png'
+      , './assets/image/motions/motions_0068.png'
+      , './assets/image/motions/motions_0069.png'
+      , './assets/image/motions/motions_0070.png'
+      , './assets/image/motions/motions_0071.png'
+      , './assets/image/motions/motions_0072.png'
+      , './assets/image/motions/motions_0073.png'
+      , './assets/image/motions/motions_0074.png'
+      , './assets/image/motions/motions_0075.png'
+      , './assets/image/motions/motions_0076.png'
+      , './assets/image/motions/motions_0077.png'
+      , './assets/image/motions/motions_0078.png'
+      , './assets/image/motions/motions_0079.png'
+      , './assets/image/motions/motions_0080.png'
+      , './assets/image/motions/motions_0081.png'
+      , './assets/image/motions/motions_0082.png'
+      , './assets/image/motions/motions_0083.png'
+      , './assets/image/motions/motions_0084.png'
+      , './assets/image/motions/motions_0085.png'
+      , './assets/image/motions/motions_0086.png'
+      , './assets/image/motions/motions_0087.png'
+      , './assets/image/motions/motions_0088.png'
+      , './assets/image/motions/motions_0089.png'
+      , './assets/image/motions/motions_0090.png'
+      , './assets/image/motions/motions_0091.png'
+      , './assets/image/motions/motions_0092.png'
+      , './assets/image/motions/motions_0093.png'
+    ];
+
+    // 이미지 로드
+    const images = [];
+    let loadedCount = 0;
+
+    imagePaths.forEach((path, index) => {
+      const img = new Image();
+      img.src = path;
+      img.onload = () => {
+        images[index] = img;
+        loadedCount++;
+        if (loadedCount === imagePaths.length) {
+          startAnimation(); // 모든 이미지가 로드되면 애니메이션 시작
+        }
+      };
+    });
+
+    // 애니메이션 변수
+    let frame = 0;
+    const frameRate = 50; // 프레임 전환 속도 (밀리초)
+    console.log(imagePaths.length);
+    let interval = null;
+    // 애니메이션 시작
+    function startAnimation() {
+      interval = setInterval(() => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height); // 캔버스 초기화
+        ctx.drawImage(images[frame], 0, 0, canvas.width, canvas.height); // 현재 프레임 그리기
+        frame = (frame + 1) % images.length; // 다음 프레임으로 이동
+        console.log("--1------------ :" + frame);
+        if (frame === imagePaths.length - 1) {
+
+        }
+      }, frameRate);
+    }
+    function stopAnimation() {
+      clearInterval(interval);
+    }
 
     eventSlider();
   </script>
