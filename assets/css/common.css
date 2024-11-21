@@ -975,6 +975,14 @@ header button {
   z-index: 110;
 }
 
+/* ready */
+.modal.ready::before {
+  background: #3f030c;
+}
+.modal.ready img {
+  width: 48.2667vw;
+}
+
 /* guide */
 .modal.guide .modal-cont > div {
   position: relative;
@@ -1806,6 +1814,14 @@ header button {
   }
   .return .btn-area .btn-large span::before {
     display: none;
+  }
+
+  /* ready */
+  .modal.ready::before {
+    background: #3f030c;
+  }
+  .modal.ready img {
+    width: 362px;
   }
 
   /* guide */
