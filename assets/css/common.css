@@ -704,7 +704,8 @@ header button {
   background-position: left center;
   background-size: 100% auto;
   background-repeat: no-repeat;
-  background-color: #3e000a;
+  background-color: #3f000b;
+  /* background-color: #3e000a; */
 }
 .event .inner {
   position: relative;
